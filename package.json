@@ -1,0 +1,39 @@
+{
+  "name": "devburguer-api",
+  "version": "1.0.0",
+  "description": "DevBurguer API",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "undo": "yarn sequelize db:migrate:undo",
+    "migrate": "yarn sequelize db:migrate"
+  },
+  "author": {
+    "name": "Thiago Goncalves",
+    "url": "https://github.com/RAGNAR303"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "eslint": "^9.24.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.2",
+    "nodemon": "^3.1.9",
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7",
+    "sqlit": "^2.0.0",
+    "uuid": "^11.1.0",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "sequelize-cli": "^6.6.2",
+    "sucrase": "^3.35.0"
+  }
+}
