@@ -28,3 +28,19 @@ Evita erros silenciosos — transforma erros sutis em erros visíveis.
 Impede certas palavras reservadas — como usar let, class, const de forma errada.
 Evita criação de variáveis globais acidentais — por exemplo, se você esquecer de usar let ou const.
 Sem 'use strict', esse código criaria a variável x de forma global sem reclamar, o que pode causar muitos bugs.
+
+Por linha de Comando
+Sequencia para enviar arquivo pela primeira vez no respositorio :
+
+1. Criar  o repositorio no GitHub 'Nome-criado'
+2.
+3.
+4.
+5.
+
+
+
+com repositorio ja criado e so que atulizar arquivos :
+1. git add.  - adicinar arquivo
+2. git commit -m"nome da ateração" - commit arquivo , ou atulaizar alguma ateração feita
+3. git push - enviar para repositorio

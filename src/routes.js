@@ -22,7 +22,7 @@ const upload = multer(multerConfig);
 // Quando uma requisição POST é feita para '/users', a função 'store' do 'UseController' será executada.
 // Essa função provavelmente conterá a lógica para receber os dados do novo usuário e salvá-los no banco de dados.
 routes.post('/users', UseController.store);
-
+routes.get('/users', UseController.index);
 // Rota POST para login usuário ja castrado
 // Define uma rota que responde a requisições HTTP POST no caminho '/session'.
 // Quando uma requisição POST é feita para '/session', a função 'store' do 'SessionController' será executada.
@@ -41,8 +41,8 @@ routes.get('/products', ProductController.index);
 
 routes.post('/categories', CategoryController.store);
 routes.get('/categories', CategoryController.index);
-
 routes.use(authMiddleware);
+
 // Exporta a constante 'routes'.
 // Isso torna o objeto 'routes' disponível para ser importado e usado em outros arquivos do projeto,
 // geralmente no arquivo principal do servidor para definir todas as rotas da aplicação Express.
