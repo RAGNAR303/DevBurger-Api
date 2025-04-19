@@ -35,13 +35,15 @@ routes.post('/session', SessionController.store);
 // 'uploads.single('file')' indica que esta rota espera um único arquivo no corpo da requisição com o nome de campo 'file'.
 // O multer irá processar este arquivo antes que a função 'store' do 'ProductController' seja chamada.
 // A função 'store' do 'ProductController' provavelmente conterá a lógica para receber os dados do produto (incluindo o arquivo enviado) e salvá-los.
-
+routes.use(authMiddleware);
 routes.post('/products', upload.single('file'), ProductController.store);
 routes.get('/products', ProductController.index);
 
 routes.post('/categories', CategoryController.store);
+
+
 routes.get('/categories', CategoryController.index);
-routes.use(authMiddleware);
+
 
 // Exporta a constante 'routes'.
 // Isso torna o objeto 'routes' disponível para ser importado e usado em outros arquivos do projeto,

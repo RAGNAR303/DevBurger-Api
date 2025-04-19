@@ -34,7 +34,7 @@ class CategoryController {
 
   async index(request, response) {
     const categories = await Category.findAll();
-
+    console.log({userId: request.userId});
     return response.json(categories);
   }
 }
