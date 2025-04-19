@@ -2,11 +2,12 @@
 import { Router } from 'express'; // Esta importando o objeto Router do express,que permite importação rotas separada
 import multer from 'multer';
 import multerConfig from './config/multer.js';
-import authMiddleware from './middlewares/auth.js';
+import authMiddleware from './app/middlewares/auth.js';
 import UseController from './app/controllers/UseController.js';
 import SessionController from './app/controllers/SessionController.js';
 import ProductController from './app/controllers/ProductController.js';
 import CategoryController from './app/controllers/CategoryController.js';
+import OrderController from './app/controllers/OrderController.js';
 
 // Cria uma nova instância do Router do Express.
 // O Router é um objeto que permite definir rotas específicas para diferentes URLs e métodos HTTP.
@@ -40,10 +41,9 @@ routes.post('/products', upload.single('file'), ProductController.store);
 routes.get('/products', ProductController.index);
 
 routes.post('/categories', CategoryController.store);
-
-
 routes.get('/categories', CategoryController.index);
 
+routes.post('/orders', OrderController.store);
 
 // Exporta a constante 'routes'.
 // Isso torna o objeto 'routes' disponível para ser importado e usado em outros arquivos do projeto,

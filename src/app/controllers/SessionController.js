@@ -60,7 +60,7 @@ class SessionController {
       name: user.name, // Nome
       email, // Email
       admin: user.admin, // Se é admin ou não (se houver esse campo)
-      token: jwt.sign({ id:user.id }, authConfig.secret, {
+      token: jwt.sign({ id:user.id, name:user.name }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
       }),
       // } ),

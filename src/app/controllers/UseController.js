@@ -5,7 +5,10 @@ import User from '../models/User.js';
 class UserController {
   async store(request, response) {
     const schema = Yup.object({
-      name: Yup.string().required(),
+      name: Yup.string()
+              .strict(true)
+              .matches(/^[A-Za-z\s]+$/, 'O nome deve conter apenas letras')
+              .required(),
       email: Yup.string().email().required(),
       password: Yup.string().min(8 , 'A senha tem que ter no minimo 8 caracteres').required(),
       admin: Yup.boolean(),
