@@ -8,6 +8,13 @@ class Category extends Model {
           type: Sequelize.STRING,
           llowNull: false,
         },
+        path: Sequelize.STRING,
+        url: {
+          type: Sequelize.VIRTUAL,
+          get() {
+            return `http://localhost:3001/category-file/${this.path}`;
+          },
+        },
       },
       {
         sequelize,

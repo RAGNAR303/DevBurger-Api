@@ -39,12 +39,15 @@ routes.post('/session', SessionController.store);
 routes.use(authMiddleware);
 routes.post('/products', upload.single('file'), ProductController.store);
 routes.get('/products', ProductController.index);
+routes.put('/products/:id', upload.single('file'), ProductController.update);
 
-routes.post('/categories', CategoryController.store);
+routes.post('/categories', upload.single('file'), CategoryController.store);
 routes.get('/categories', CategoryController.index);
+routes.put('/categories/:id', upload.single('file'), CategoryController.update);
 
 routes.post('/orders', OrderController.store);
-
+routes.get('/orders', OrderController.index);
+routes.put('/orders/:id', OrderController.update);
 // Exporta a constante 'routes'.
 // Isso torna o objeto 'routes' disponível para ser importado e usado em outros arquivos do projeto,
 // geralmente no arquivo principal do servidor para definir todas as rotas da aplicação Express.

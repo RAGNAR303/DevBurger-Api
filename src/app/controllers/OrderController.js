@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import Order from '../schemas/Order'; // Model que representa a tabela de produtos
 import Product from '../models/Product';
 import Category from '../models/Category';
+import User from '../models/User';
 
 class OrderController {
   async store(request, response) {
@@ -60,6 +61,37 @@ class OrderController {
     const createdOrder = await Order.create(order);
 
     return response.status(201).json(createdOrder);
+  }
+  async index(request, response) {
+    const orders = await Order.find();
+    return response.json(orders);
+  }
+  async update(request, response) {
+    const schema = Yup.object({
+      status: Yup.string().required(),
+    });
+
+    try {
+      // Validação dos dados da requisição
+      schema.validateSync(request.body, { abortEarly: false });
+    } catch (err) {
+      return response.status(400).json({ error: err.errors });
+    }
+    const { admin: isAdmin } = await User.findByPk(request.userId);
+
+    if (!isAdmin) {
+      return response.status(401).json();
+    }
+    const { id } = request.params;
+    const { status } = request.body;
+
+    try {
+      await Order.updateOne({ _id: id }, { status });
+    } catch (err) {
+      return response.status(400).json({ error: err.message });
+    }
+
+    return response.json({ message: 'Status updated sucessfully' });
   }
 }
 
