@@ -576,6 +576,14 @@ core-util-is@~1.0.0:
   resolved "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
 
+cors@^2.8.5:
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
+  integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
+  dependencies:
+    object-assign "^4"
+    vary "^1"
+
 cross-spawn@^7.0.6:
   version "7.0.6"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz"
@@ -875,7 +883,7 @@ event-emitter@^0.3.5:
 
 express@^5.1.0:
   version "5.1.0"
-  resolved "https://registry.npmjs.org/express/-/express-5.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/express/-/express-5.1.0.tgz#d31beaf715a0016f0d53f47d3b4d7acf28c75cc9"
   integrity sha512-DT9ck5YIRU+8GYzzU5kT3eHGA5iL+1Zd0EutOmTE9Dtk+Tvuzd23VBU+ec7HPNSTxXYO55gPV/hq4pSBJDjFpA==
   dependencies:
     accepts "^2.0.0"
@@ -1711,10 +1719,10 @@ node-fetch@^2.6.7:
   dependencies:
     whatwg-url "^5.0.0"
 
-nodemon@^3.1.9:
-  version "3.1.9"
-  resolved "https://registry.npmjs.org/nodemon/-/nodemon-3.1.9.tgz"
-  integrity sha512-hdr1oIb2p6ZSxu3PB2JWWYS7ZQ0qvaZsc3hK8DR8f02kRzc8rjYmxAIvdz+aYC+8F2IjNaB7HMcSDg8nQpJxyg==
+nodemon@^3.1.10:
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.1.10.tgz#5015c5eb4fffcb24d98cf9454df14f4fecec9bc1"
+  integrity sha512-WDjw3pJ0/0jMFmyNDp3gvY2YizjLmmOUQo6DEBY+JgdvW/yQ9mEeSw6H5ythl5Ny2ytb7f9C2nIbjSxMNzbJXw==
   dependencies:
     chokidar "^3.5.2"
     debug "^4"
@@ -1756,7 +1764,7 @@ npmlog@^5.0.1:
     gauge "^3.0.0"
     set-blocking "^2.0.0"
 
-object-assign@^4.0.1, object-assign@^4.1.1:
+object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
   integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
@@ -1856,19 +1864,24 @@ path-to-regexp@^8.0.0:
   resolved "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-8.2.0.tgz"
   integrity sha512-TdrF7fW9Rphjq4RjrW0Kp2AW0Ahwu9sRGTkS6bvDi0SCwZlEZYmcfDbEsTz8RVk0EHIS/Vd1bv3JhG+1xZuAyQ==
 
-pg-cloudflare@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/pg-cloudflare/-/pg-cloudflare-1.1.1.tgz"
-  integrity sha512-xWPagP/4B6BgFO+EKz3JONXv3YDgvkbVrGw2mTo3D6tVDQRh1e7cqVGvyR3BE+eQgAvx1XhW/iEASj4/jCWl3Q==
+pg-cloudflare@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/pg-cloudflare/-/pg-cloudflare-1.2.5.tgz#2e3649c38a7a9c74a7e5327c8098a2fd9af595bd"
+  integrity sha512-OOX22Vt0vOSRrdoUPKJ8Wi2OpE/o/h9T8X1s4qSkCedbNah9ei2W2765be8iMVxQUsvgT7zIAT2eIa9fs5+vtg==
 
-pg-connection-string@^2.6.1, pg-connection-string@^2.7.0:
+pg-connection-string@^2.6.1:
   version "2.7.0"
   resolved "https://registry.npmjs.org/pg-connection-string/-/pg-connection-string-2.7.0.tgz"
   integrity sha512-PI2W9mv53rXJQEOb8xNR8lH7Hr+EKa6oJa38zsK0S/ky2er16ios1wLKhZyxzD7jUReiWokc9WK5nxSnC7W1TA==
 
+pg-connection-string@^2.8.5:
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/pg-connection-string/-/pg-connection-string-2.8.5.tgz#82cefd0269cb64a09603342d9b69e8392e6eb6cd"
+  integrity sha512-Ni8FuZ8yAF+sWZzojvtLE2b03cqjO5jNULcHFfM9ZZ0/JXrgom5pBREbtnAw7oxsxJqHw9Nz/XWORUEL3/IFow==
+
 pg-hstore@^2.3.4:
   version "2.3.4"
-  resolved "https://registry.npmjs.org/pg-hstore/-/pg-hstore-2.3.4.tgz"
+  resolved "https://registry.yarnpkg.com/pg-hstore/-/pg-hstore-2.3.4.tgz#4425e3e2a3e15d2a334c35581186c27cf2e9b8dd"
   integrity sha512-N3SGs/Rf+xA1M2/n0JBiXFDVMzdekwLZLAO0g7mpDY9ouX+fDI7jS6kTq3JujmYbtNSJ53TJ0q4G98KVZSM4EA==
   dependencies:
     underscore "^1.13.1"
@@ -1878,15 +1891,15 @@ pg-int8@1.0.1:
   resolved "https://registry.npmjs.org/pg-int8/-/pg-int8-1.0.1.tgz"
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
-pg-pool@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.npmjs.org/pg-pool/-/pg-pool-3.8.0.tgz"
-  integrity sha512-VBw3jiVm6ZOdLBTIcXLNdSotb6Iy3uOCwDGFAksZCXmi10nyRvnP2v3jl4d+IsLYRyXf6o9hIm/ZtUzlByNUdw==
+pg-pool@^3.9.6:
+  version "3.9.6"
+  resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-3.9.6.tgz#c6fde89dee615d6c262724e68a3a37e9593157fc"
+  integrity sha512-rFen0G7adh1YmgvrmE5IPIqbb+IgEzENUm+tzm6MLLDSlPRoZVhzU1WdML9PV2W5GOdRA9qBKURlbt1OsXOsPw==
 
-pg-protocol@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.npmjs.org/pg-protocol/-/pg-protocol-1.8.0.tgz"
-  integrity sha512-jvuYlEkL03NRvOoyoRktBK7+qU5kOvlAwvmrH8sr3wbLrOdVWsRxQfz8mMy9sZFsqJ1hEWNfdWKI4SAmoL+j7g==
+pg-protocol@^1.9.5:
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/pg-protocol/-/pg-protocol-1.9.5.tgz#e544eff37d6ab79c26281d7c0b59ac9be4862686"
+  integrity sha512-DYTWtWpfd5FOro3UnAfwvhD8jh59r2ig8bPtc9H8Ds7MscE/9NYruUQWFAOuraRl29jwcT2kyMFQ3MxeaVjUhg==
 
 pg-types@^2.1.0:
   version "2.2.0"
@@ -1899,18 +1912,18 @@ pg-types@^2.1.0:
     postgres-date "~1.0.4"
     postgres-interval "^1.1.0"
 
-pg@^8.14.1:
-  version "8.14.1"
-  resolved "https://registry.npmjs.org/pg/-/pg-8.14.1.tgz"
-  integrity sha512-0TdbqfjwIun9Fm/r89oB7RFQ0bLgduAhiIqIXOsyKoiC/L54DbuAAzIEN/9Op0f1Po9X7iCPXGoa/Ah+2aI8Xw==
+pg@^8.15.6:
+  version "8.15.6"
+  resolved "https://registry.yarnpkg.com/pg/-/pg-8.15.6.tgz#2a28e98fb6cab18b886ce58b2c184d712a94880a"
+  integrity sha512-yvao7YI3GdmmrslNVsZgx9PfntfWrnXwtR+K/DjI0I/sTKif4Z623um+sjVZ1hk5670B+ODjvHDAckKdjmPTsg==
   dependencies:
-    pg-connection-string "^2.7.0"
-    pg-pool "^3.8.0"
-    pg-protocol "^1.8.0"
+    pg-connection-string "^2.8.5"
+    pg-pool "^3.9.6"
+    pg-protocol "^1.9.5"
     pg-types "^2.1.0"
     pgpass "1.x"
   optionalDependencies:
-    pg-cloudflare "^1.1.1"
+    pg-cloudflare "^1.2.5"
 
 pgpass@1.x:
   version "1.0.5"
@@ -2366,7 +2379,7 @@ strip-json-comments@^3.1.1:
 
 sucrase@^3.35.0:
   version "3.35.0"
-  resolved "https://registry.npmjs.org/sucrase/-/sucrase-3.35.0.tgz"
+  resolved "https://registry.yarnpkg.com/sucrase/-/sucrase-3.35.0.tgz#57f17a3d7e19b36d8995f06679d121be914ae263"
   integrity sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==
   dependencies:
     "@jridgewell/gen-mapping" "^0.3.2"
@@ -2590,7 +2603,7 @@ validator@^13.9.0:
   resolved "https://registry.npmjs.org/validator/-/validator-13.15.0.tgz"
   integrity sha512-36B2ryl4+oL5QxZ3AzD0t5SsMNGvTtQHpjgFO5tbNxfXbMFkY822ktCDe1MnlqV3301QQI9SLHDNJokDI+Z9pA==
 
-vary@^1.1.2:
+vary@^1, vary@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==

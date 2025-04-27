@@ -21,11 +21,11 @@ class Product extends Model {
     );
     return this;
   }
-  static associate(models){
+  static associate(models) {
     this.belongsTo(models.Category, {
-      foreignKey:'category_id',
-      as:'category'
-    })
+      foreignKey: 'category_id',
+      as: 'category',
+    });
   }
 }
 export default Product;

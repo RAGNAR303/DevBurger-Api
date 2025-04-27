@@ -1,11 +1,9 @@
-// Importa a biblioteca 'yup' para validação de dados
 import * as Yup from 'yup';
 import Product from '../models/Product.js'; // Model que representa a tabela de produtos
 import Category from '../models/Category.js';
 import User from '../models/User.js';
 
 class ProductController {
-  // Criação de um novo produto
   async store(request, response) {
     const schema = Yup.object({
       name: Yup.string().required('Name is required'),
@@ -15,13 +13,11 @@ class ProductController {
     });
 
     try {
-      // Validação dos dados da requisição
       schema.validateSync(request.body, { abortEarly: false });
     } catch (err) {
       return response.status(400).json({ error: err.errors });
     }
 
-    // Verifica se o arquivo foi enviado (ex: imagem do produto)
     if (!request.file) {
       return response.status(400).json({ error: 'File is required.' });
     }
@@ -34,7 +30,6 @@ class ProductController {
     const { filename: path } = request.file;
     const { name, price, category_id, offer } = request.body;
 
-    // Cria o produto no banco de dados
     const product = await Product.create({
       name,
       price,
@@ -42,8 +37,8 @@ class ProductController {
       path,
       offer,
     });
-
-    return response.status(201).json({ product });
+    console.log(product);
+    return response.status(201).json(product);
   }
 
   async update(request, response) {
@@ -85,7 +80,7 @@ class ProductController {
     }
 
     const { name, price, category_id, offer } = request.body;
-  
+
     await Product.update(
       {
         name,
@@ -115,7 +110,7 @@ class ProductController {
         },
       ],
     });
-    console.log({ userId: request.userId });
+    // console.log({ userId: request.userId });
     // Log para debugging (pode ser removido em produção)
     return response.json(products);
   }

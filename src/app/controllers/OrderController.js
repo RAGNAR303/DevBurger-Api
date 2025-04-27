@@ -1,9 +1,9 @@
 // Importa a biblioteca 'yup' para validação de dados
 import * as Yup from 'yup';
-import Order from '../schemas/Order'; // Model que representa a tabela de produtos
-import Product from '../models/Product';
-import Category from '../models/Category';
-import User from '../models/User';
+import Order from '../schemas/Order.js'; // Model que representa a tabela de produtos
+import Product from '../models/Product.js';
+import Category from '../models/Category.js';
+import User from '../models/User.js';
 
 class OrderController {
   async store(request, response) {

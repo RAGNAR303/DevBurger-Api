@@ -4,23 +4,17 @@ class Category extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: {
-          type: Sequelize.STRING,
-          llowNull: false,
-        },
+        name: Sequelize.STRING,
         path: Sequelize.STRING,
         url: {
           type: Sequelize.VIRTUAL,
           get() {
-            return `http://localhost:3001/category-file/${this.path}`;
+            return `http://localhost:3001/category-file/${this.path};`;
           },
         },
       },
       {
         sequelize,
-        // tableName: 'categories',
-        // modelName: 'Category',
-        // underscored: true, // se você usa created_at / updated_at no padrão snake_case
       },
     );
     return this;

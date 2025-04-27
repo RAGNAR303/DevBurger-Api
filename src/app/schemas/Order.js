@@ -1,13 +1,14 @@
 import mongoose from 'mongoose';
 
-const OrderSchema = new mongoose.Schema({
+const OrderSchema = new mongoose.Schema(
+  {
     user: {
       id: {
         type: String,
         required: true,
       },
-      name:{
-        type:String,
+      name: {
+        type: String,
         required: true,
       },
     },
