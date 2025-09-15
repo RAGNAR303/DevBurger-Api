@@ -22,14 +22,10 @@ ________________________________________________________________________________
 <img width="3840" height="1651" alt="{1D6DE70D-694B-40B0-AAED-60E806C31793}" src="https://github.com/user-attachments/assets/950c94b5-08c6-490f-853a-36c9d1f4837f" />
 <br>
 <br>
-<p>Interface simples car store , atividade baseada no video de Dev Club, para treinar coceitos de programação</p>
+<p>Tela Inicial com produtos em Oferta</p>
 <br>
 <br>
 <br>
-
-<br>
-<br>
-<p>Interface simples car store , atividade baseada no video de Dev Club, para treinar coceitos de programação</p>
 <br>
 <br>
 <br>
@@ -43,8 +39,6 @@ ________________________________________________________________________________
 
 <img width="3838" height="1639" alt="{84478DA1-057A-40F2-B89B-2D35D57EEC13}" src="https://github.com/user-attachments/assets/1e93c190-777e-472f-8adf-cbbaaacf77fa" />
 <br>
-<br>
-<p>Interface simples car store , atividade baseada no video de Dev Club, para treinar coceitos de programação</p>
 <br>
 <br>
 <img width="3840" height="1645" alt="{FD6E3CAB-6535-43BE-B633-6BD9707065B0}" src="https://github.com/user-attachments/assets/bc3f2fe5-1a13-410a-a2d1-9cc8ed33fa83" />
